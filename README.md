@@ -4,7 +4,20 @@ Made with Remix
 
 - 📖 [Remix docs](https://remix.run/docs)
 
-## Development
+## TODO
+
+- [ ] Depoly to Cloud Run
+- [ ] Mock basic UI
+- [ ] Setup database
+- [ ] Connect to Database
+- [ ] Add Authentication
+- [ ] Add Signup process
+  - [ ] Add address information
+  - [ ] Add family members
+- [ ] View Programs
+- [ ] Apply to programs
+- [ ] see program opportunities
+- [ ] request food box
 
 Run the dev server:
 
