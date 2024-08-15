@@ -12,6 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { MobileSideBar } from "~/components/shell/sidebars";
 import { getAuth } from "@clerk/remix/ssr.server";
+import { testDb } from "~/db/test.server";
 
 
 const primaryNav = [
@@ -36,14 +37,19 @@ export const loader = async (args: LoaderFunctionArgs) => {
     return redirect('/sign-in');
   }
 
-  return json({});
+  const docsQuery = await testDb.collection('/nonprofits/cist/applications').get
+    ()
+
+  const docs = docsQuery.docs.map((doc) => doc.data());
+
+  return json({ docs });
 };
 
 
 
 
 export default function HomePage() {
-
+  const { docs } = useLoaderData<typeof loader>();
 
 
   return (
@@ -54,7 +60,11 @@ export default function HomePage() {
 
       mobileSideBar={<MobileSideBar primaryNav={primaryNav} secondaryNav={secondaryNav} />}
     >
-      <h1>hello</h1>
+      <div>
+
+        <h1>hello</h1>
+        <pre>{JSON.stringify(docs, null, 2)}</pre>
+      </div>
     </UIShell>
   )
 

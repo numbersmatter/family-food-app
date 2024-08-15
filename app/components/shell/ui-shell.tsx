@@ -78,7 +78,10 @@ export default function UIShell({
            Your content 
            </div>
         </main> */}
-        {children}
+        <div className='py-10 lg:pl-72'>
+
+          {children}
+        </div>
       </div>
     </>
   )
