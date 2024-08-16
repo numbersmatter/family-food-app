@@ -13,6 +13,9 @@ import {
 import { MobileSideBar } from "~/components/shell/sidebars";
 import { getAuth } from "@clerk/remix/ssr.server";
 import { testDb } from "~/db/test.server";
+import { SectionHeader } from "./components/section-header";
+import PageHeader from "./components/page-header";
+import { ActiveOpportunitiesList } from "./components/active-opportunities";
 
 
 const primaryNav = [
@@ -37,6 +40,7 @@ export const loader = async (args: LoaderFunctionArgs) => {
     return redirect('/sign-in');
   }
 
+
   const docsQuery = await testDb.collection('/nonprofits/cist/applications').get
     ()
 
@@ -60,6 +64,9 @@ export default function HomePage() {
 
       mobileSideBar={<MobileSideBar primaryNav={primaryNav} secondaryNav={secondaryNav} />}
     >
+      <PageHeader />
+      <SectionHeader />
+      <ActiveOpportunitiesList />
       <div>
 
         <h1>hello</h1>
