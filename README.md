@@ -6,8 +6,13 @@ Made with Remix
 
 ## TODO
 
-- [ ] Depoly to Cloud Run
 - [ ] Mock basic UI
+- [ ] Family Dashboard with service history
+- [ ] Side Bar
+  - [ ] Add Family Members
+  - [ ] Open Programs
+  - [ ] Open Opportunities
+- [ ] Depoly to Cloud Run
 - [ ] Setup database
 - [ ] Connect to Database
 - [ ] Add Authentication

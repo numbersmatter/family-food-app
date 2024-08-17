@@ -37,7 +37,7 @@ const secondaryNav = [
 export const loader = async (args: LoaderFunctionArgs) => {
   const { userId } = await getAuth(args);
   if (!userId) {
-    return redirect('/sign-in');
+    return redirect('/login');
   }
 
 

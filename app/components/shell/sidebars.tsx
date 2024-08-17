@@ -1,4 +1,4 @@
-import { UserButton } from "@clerk/remix";
+import { SignedIn, UserButton } from "@clerk/remix";
 import { Link, NavLink } from "@remix-run/react";
 import { ComponentType, FunctionComponent, ReactNode } from "react";
 import { cn } from "~/lib/utils";
@@ -101,8 +101,9 @@ export function DesktopSideBar({
           <li className="">
 
             <div className=" border-slate-100  border-2 py-1" >
-
-              <UserButton showName />
+              <SignedIn>
+                <UserButton showName />
+              </SignedIn>
             </div>
 
           </li>

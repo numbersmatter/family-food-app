@@ -12,7 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { Link, NavLink } from '@remix-run/react'
 import { cn } from '~/lib/utils'
-import { UserButton } from '@clerk/remix'
+import { SignedIn, UserButton } from '@clerk/remix'
 
 
 
@@ -96,7 +96,10 @@ function MobileMenuBar({ setSidebarOpen }: { setSidebarOpen: (open: boolean) => 
       <Bars3Icon aria-hidden="true" className="h-6 w-6" />
     </button>
     <div className="flex-1 text-sm font-semibold leading-6 text-white">Dashboard</div>
-    <UserButton />
+    <SignedIn>
+
+      <UserButton />
+    </SignedIn>
   </div>
 }
 

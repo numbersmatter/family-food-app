@@ -9,6 +9,7 @@ import {
 } from "~/components/ui/card";
 import { ApplyDialogForm } from "./apply-dialog-form";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
+import grocery from "~/images/groceries.gif"
 
 
 interface Opportunity {
@@ -30,7 +31,7 @@ export default function OpportunityCard({ opportunity }: { opportunity: Opportun
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-1 flex justify-center">
-        <ShoppingBagIcon className="h-36 w-36  shrink-0'" />
+        <img alt="groceries" src={grocery} className="h-36 w-36  shrink-0'" />
       </CardContent>
       <CardFooter className="">
         <ApplyDialogForm />

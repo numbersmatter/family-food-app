@@ -13,10 +13,10 @@ export const meta: MetaFunction = () => {
 
 
 export const loader = async (args: LoaderFunctionArgs) => {
-  const { userId } = await getAuth(args);
-  if (userId) {
-    throw redirect('/home');
-  }
+  // const { userId } = await getAuth(args);
+  // if (userId) {
+  //   throw redirect('/home');
+  // }
 
   return json({});
 };

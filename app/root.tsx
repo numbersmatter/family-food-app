@@ -49,12 +49,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-function App() {
+export default function App() {
   return <Outlet />;
 }
 
-export default ClerkApp(App, {
-  appearance: {
-    baseTheme: shadesOfPurple,
-  }
-});
+
+// export default ClerkApp(App, {
+//   appearance: {
+//     baseTheme: shadesOfPurple,
+//   }
+// });
